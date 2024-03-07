@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: naseerjamalipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naseerjamalipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: naseerjamalipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: naseerjamalipipelinesjavascriptdocker 
+          image: burraqconregistry.azurecr.io/naseerjamalipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
